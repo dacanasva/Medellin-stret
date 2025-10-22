@@ -5,200 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="contenido/MEDELLIN STREET-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/index.css">
   <title>Medellín Street Vibes</title>
-  <style>
-    /* ===== Estilos generales ===== */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f5f5f5;
-      color: #222;
-    }
-
-    /* ===== Encabezado ===== */
-    header {
-      text-align: center;
-      padding: 50px 20px 30px;
-      background: linear-gradient(135deg, #111, #005eff);
-      color: #fff;
-    }
-
-    header h1 {
-      margin-bottom: 10px;
-      font-size: 2.5em;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      max-width: 700px;
-      margin: auto;
-      color: #e0e0e0;
-      line-height: 1.5em;
-    }
-
-    /* ===== Galería estilo Masonry ===== */
-    .galeria {
-      column-count: 4;
-      column-gap: 15px;
-      padding: 40px 25px;
-      max-width: 1400px;
-      margin: auto;
-    }
-
-    .item {
-      break-inside: avoid;
-      margin-bottom: 15px;
-      background: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.25s ease;
-      display: block;
-    }
-
-    .item:hover {
-      transform: scale(1.02);
-    }
-
-    .item img,
-    .item video {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-
-    video {
-      background: #000;
-    }
-
-    /* ===== Footer ===== */
-    footer {
-      background: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 40px 20px;
-      margin-top: 30px;
-    }
-
-    footer p {
-      font-size: 1em;
-      max-width: 700px;
-      margin: auto;
-      line-height: 1.6em;
-    }
-
-    footer span {
-      color: #ff0000;
-      font-weight: bold;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 1200px) {
-      .galeria {
-        column-count: 3;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .galeria {
-        column-count: 2;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .galeria-wrapper {
-        max-height: 1500px;
-        /* ajusta a lo que visualmente te parezca razonable */
-        overflow: hidden;
-        position: relative;
-      }
-
-      .ver-mas-btn {
-        display: block;
-        text-align: center;
-        margin: 20px auto;
-        background: #000000;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-    }
-
-
-
-
-
-    /* ===== Header actualizado con imagen ===== */
-    header {
-      background: linear-gradient(135deg, #484848, #000000);
-      color: #fff;
-      padding: 0;
-      text-align: center;
-    }
-
-    .header-contenido {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 50px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .header-img {
-      max-width: 400px;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-      margin: 15px;
-    }
-
-    /* ===== Responsive ajustes header ===== */
-    @media (max-width: 768px) {
-      .header-contenido {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .header-texto {
-        text-align: center;
-      }
-    }
-
-
-
-    .item {
-      display: inline-block;
-      margin: 5px;
-    }
-
-    #pagination {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    #pagination button {
-      margin: 2px;
-      padding: 5px 10px;
-      border: none;
-      background-color: #ddd;
-      cursor: pointer;
-    }
-
-    #pagination button.active {
-      background-color: #333;
-      color: white;
-    }
-  </style>
 </head>
 
 <body>
@@ -206,8 +14,17 @@
   <header>
     <div class="header-contenido">
       <img src="contenido/MEDELLIN STREET-logo.png" alt="Medellín Street Vibes" class="header-img">
+      <nav class="navegacion">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="#nosotros">Comunicados</a></li>
+          <li><a href="/PAGES/equipos.html">Equipos</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
+
+
 
 
   <!-- ===== Galería ===== -->
@@ -221,122 +38,208 @@
   <footer>
     <p><span>Porque Medellín Street nunca decepciona:</span> cada vez que dicen “plan tranqui”,
       termina siendo todo menos tranqui. Y así nos gusta.</p>
+    <hr>
+    <p>© 2025 Medellín Street — Hecho con ❤️ por nuestra comunidad.</p>
   </footer>
 
   <script>
-    // Cantidad de ítems por página
-    const ITEMS_PER_PAGE = 50;
+    const ITEMS_PER_PAGE = 20;
 
     // Lista de todos los elementos (img y video)
     const itemsHTML = `
-      <div class="item"><img src="contenido/M1.jpeg" alt="Foto 1" loading="lazy"></div>
-    <div class="item"><img src="contenido/M2.jpeg" alt="Foto 2" loading="lazy"></div>
-    <div class="item"><img src="contenido/M3.jpeg" alt="Foto 3" loading="lazy"></div>
-    <div class="item"><img src="contenido/M4.jpeg" alt="Foto 4" loading="lazy"></div>
-    <div class="item"><img src="contenido/M5.jpeg" alt="Foto 5" loading="lazy"></div>
-    <div class="item"><img src="contenido/M6.jpeg" alt="Foto 6" loading="lazy"></div>
-    <div class="item"><img src="contenido/M7.jpeg" alt="Foto 7" loading="lazy"></div>
-    <div class="item"><img src="contenido/M8.jpeg" alt="Foto 8" loading="lazy"></div>
-    <div class="item"><img src="contenido/M9.jpeg" alt="Foto 9" loading="lazy"></div>
-    <div class="item"><img src="contenido/M10.jpeg" alt="Foto 10" loading="lazy"></div>
-    <div class="item"><img src="contenido/M11.jpeg" alt="Foto 11" loading="lazy"></div>
-    <div class="item"><img src="contenido/M12.jpeg" alt="Foto 12" loading="lazy"></div>
-    <div class="item"><img src="contenido/M13.jpeg" alt="Foto 13" loading="lazy"></div>
-    <div class="item"><img src="contenido/M14.jpeg" alt="Foto 14" loading="lazy"></div>
-    <div class="item"><img src="contenido/M15.jpeg" alt="Foto 15" loading="lazy"></div>
-    <div class="item"><img src="contenido/M16.jpeg" alt="Foto 16" loading="lazy"></div>
-    <div class="item"><img src="contenido/M17.jpeg" alt="Foto 17" loading="lazy"></div>
-    <div class="item"><img src="contenido/M18.jpeg" alt="Foto 18" loading="lazy"></div>
-    <div class="item"><img src="contenido/M19.jpeg" alt="Foto 19" loading="lazy"></div>
-    <div class="item"><img src="contenido/M20.jpeg" alt="Foto 20" loading="lazy"></div>
-    <div class="item"><img src="contenido/M21.jpeg" alt="Foto 21" loading="lazy"></div>
-    <div class="item"><img src="contenido/M22.jpeg" alt="Foto 22" loading="lazy"></div>
-    <div class="item"><img src="contenido/M23.jpeg" alt="Foto 23" loading="lazy"></div>
-    <div class="item"><img src="contenido/M24.jpeg" alt="Foto 24" loading="lazy"></div>
-    <div class="item"><img src="contenido/M25.jpeg" alt="Foto 25" loading="lazy"></div>
-    <div class="item"><img src="contenido/M26.jpeg" alt="Foto 26" loading="lazy"></div>
-    <div class="item"><img src="contenido/M27.jpeg" alt="Foto 27" loading="lazy"></div>
-    <div class="item"><img src="contenido/M28.jpeg" alt="Foto 28" loading="lazy"></div>
-    <div class="item"><img src="contenido/M29.jpeg" alt="Foto 29" loading="lazy"></div>
-    <div class="item"><img src="contenido/M30.jpeg" alt="Foto 30" loading="lazy"></div>
-    <div class="item"><img src="contenido/M31.jpeg" alt="Foto 31" loading="lazy"></div>
-    <div class="item"><img src="contenido/M32.jpeg" alt="Foto 32" loading="lazy"></div>
-    <div class="item"><img src="contenido/M33.jpeg" alt="Foto 33" loading="lazy"></div>
-    <div class="item"><img src="contenido/M34.jpeg" alt="Foto 34" loading="lazy"></div>
+      <div class="item"><img src="contenido/M1.jpeg" alt="Foto 1" ></div>
+      <div class="item"><img src="contenido/M2.jpeg" alt="Foto 2" ></div>
+      <div class="item"><img src="contenido/M3.jpeg" alt="Foto 3" ></div>
+      <div class="item"><img src="contenido/M4.jpeg" alt="Foto 4" ></div>
+      <div class="item"><img src="contenido/M5.jpeg" alt="Foto 5" ></div>
+      <div class="item"><img src="contenido/M6.jpeg" alt="Foto 6" ></div>
+      <div class="item"><img src="contenido/M7.jpeg" alt="Foto 7" ></div>
+      <div class="item"><img src="contenido/M8.jpeg" alt="Foto 8" ></div>
+      <div class="item"><img src="contenido/M9.jpeg" alt="Foto 9" ></div>
+      <div class="item"><img src="contenido/M10.jpeg" alt="Foto 10" ></div>
+      <div class="item"><img src="contenido/M11.jpeg" alt="Foto 11" ></div>
+      <div class="item"><img src="contenido/M12.jpeg" alt="Foto 12" ></div>
+      <div class="item"><img src="contenido/M13.jpeg" alt="Foto 13" ></div>
+      <div class="item"><img src="contenido/M14.jpeg" alt="Foto 14" ></div>
+      <div class="item"><img src="contenido/M15.jpeg" alt="Foto 15" ></div>
+      <div class="item"><img src="contenido/M16.jpeg" alt="Foto 16" ></div>
+      <div class="item"><img src="contenido/M17.jpeg" alt="Foto 17" ></div>
+      <div class="item"><img src="contenido/M18.jpeg" alt="Foto 18" ></div>
+      <div class="item"><img src="contenido/M19.jpeg" alt="Foto 19" ></div>
+      <div class="item"><img src="contenido/M20.jpeg" alt="Foto 20" ></div>
+      <div class="item"><img src="contenido/M21.jpeg" alt="Foto 21" ></div>
+      <div class="item"><img src="contenido/M22.jpeg" alt="Foto 22" ></div>
+      <div class="item"><img src="contenido/M23.jpeg" alt="Foto 23" ></div>
+      <div class="item"><img src="contenido/M24.jpeg" alt="Foto 24" ></div>
+      <div class="item"><img src="contenido/M25.jpeg" alt="Foto 25" ></div>
+      <div class="item"><img src="contenido/M26.jpeg" alt="Foto 26" ></div>
+      <div class="item"><img src="contenido/M27.jpeg" alt="Foto 27" ></div>
+      <div class="item"><img src="contenido/M28.jpeg" alt="Foto 28" ></div>
+      <div class="item"><img src="contenido/M29.jpeg" alt="Foto 29" ></div>
+      <div class="item"><img src="contenido/M30.jpeg" alt="Foto 30" ></div>
+      <div class="item"><img src="contenido/M31.jpeg" alt="Foto 31" ></div>
+      <div class="item"><img src="contenido/M32.jpeg" alt="Foto 32" ></div>
+      <div class="item"><img src="contenido/M33.jpeg" alt="Foto 33" ></div>
+      <div class="item"><img src="contenido/M34.jpeg" alt="Foto 34" ></div>
+      <div class="item"><img src="contenido/M35.jpg" alt="Foto 35"></div>
+      <div class="item"><img src="contenido/M36.jpg" alt="Foto 36"></div>
+      <div class="item"><img src="contenido/M37.jpg" alt="Foto 37"></div>
+      <div class="item"><img src="contenido/M38.jpg" alt="Foto 38"></div>
+      <div class="item"><img src="contenido/M39.jpg" alt="Foto 39"></div>
+      <div class="item"><img src="contenido/M40.jpg" alt="Foto 40"></div>
+      <div class="item"><img src="contenido/M41.jpg" alt="Foto 41"></div>
+      <div class="item"><img src="contenido/M42.jpg" alt="Foto 42"></div>
+      <div class="item"><img src="contenido/M43.jpg" alt="Foto 43"></div>
+      <div class="item"><img src="contenido/M44.jpg" alt="Foto 44"></div>
+      <div class="item"><img src="contenido/M45.jpg" alt="Foto 45"></div>
+      <div class="item"><img src="contenido/M46.jpg" alt="Foto 46"></div>
+      <div class="item"><img src="contenido/M47.jpg" alt="Foto 47"></div>
+      <div class="item"><img src="contenido/M48.jpg" alt="Foto 48"></div>
+      <div class="item"><img src="contenido/M49.jpg" alt="Foto 49"></div>
+      <div class="item"><img src="contenido/M50.jpg" alt="Foto 50"></div>
+      <div class="item"><img src="contenido/M51.jpg" alt="Foto 51"></div>
+      <div class="item"><img src="contenido/M52.jpg" alt="Foto 52"></div>
+      <div class="item"><img src="contenido/M53.jpg" alt="Foto 53"></div>
+      <div class="item"><img src="contenido/M54.jpg" alt="Foto 54"></div>
+      <div class="item"><img src="contenido/M55.jpg" alt="Foto 55"></div>
+      <div class="item"><img src="contenido/M56.jpg" alt="Foto 56"></div>
+      <div class="item"><img src="contenido/M57.jpg" alt="Foto 57"></div>
+
     <!-- Agrega aquí el resto de las imágenes y videos -->
     <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V1.mp4">
-        <source src="contenido/V1.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V2.mp4">
-        <source src="contenido/V2.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V3.mp4">
-        <source src="contenido/V3.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V4.mp4">
-        <source src="contenido/V4.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V5.mp4">
-        <source src="contenido/V5.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V6.mp4">
-        <source src="contenido/V6.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V7.mp4">
-        <source src="contenido/V7.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V8.mp4">
-        <source src="contenido/V8.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V9.mp4">
-        <source src="contenido/V9.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V10.mp4">
-        <source src="contenido/V10.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V12.mp4">
-        <source src="contenido/V11.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V13.mp4">
-        <source src="contenido/V12.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V14.mp4">
-        <source src="contenido/V13.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V15.mp4">
-        <source src="contenido/V14.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V16.mp4">
-        <source src="contenido/V15.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V17.mp4">
-        <source src="contenido/V16.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V18.mp4">
-        <source src="contenido/V17.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V19.mp4">
-        <source src="contenido/V18.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V20.mp4">
-        <source src="contenido/V19.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V21.mp4">
-        <source src="contenido/V20.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V22.mp4">
-        <source src="contenido/V21.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V23.mp4">
-        <source src="contenido/V22.mp4" type="video/mp4">
-      </video></div>
-    <div class="item"><video autoplay muted loop playsinline controls poster="contenido/V24.mp4">
-        <source src="contenido/V23.mp4" type="video/mp4">
-      </video></div>
+  <source src="contenido/V1.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V2.mp4">
+  <source src="contenido/V2.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V3.mp4">
+  <source src="contenido/V3.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V4.mp4">
+  <source src="contenido/V4.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V5.mp4">
+  <source src="contenido/V5.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V6.mp4">
+  <source src="contenido/V6.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V7.mp4">
+  <source src="contenido/V7.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V8.mp4">
+  <source src="contenido/V8.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V9.mp4">
+  <source src="contenido/V9.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V10.mp4">
+  <source src="contenido/V10.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V11.mp4">
+  <source src="contenido/V11.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V12.mp4">
+  <source src="contenido/V12.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V13.mp4">
+  <source src="contenido/V13.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V14.mp4">
+  <source src="contenido/V14.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V15.mp4">
+  <source src="contenido/V15.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V16.mp4">
+  <source src="contenido/V16.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V17.mp4">
+  <source src="contenido/V17.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V18.mp4">
+  <source src="contenido/V18.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V19.mp4">
+  <source src="contenido/V19.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V20.mp4">
+  <source src="contenido/V20.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V21.mp4">
+  <source src="contenido/V21.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V22.mp4">
+  <source src="contenido/V22.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V23.mp4">
+  <source src="contenido/V23.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V24.mp4">
+  <source src="contenido/V24.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V25.mp4">
+  <source src="contenido/V25.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V26.mp4">
+  <source src="contenido/V26.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V27.mp4">
+  <source src="contenido/V27.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V28.mp4">
+  <source src="contenido/V28.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V29.mp4">
+  <source src="contenido/V29.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V30.mp4">
+  <source src="contenido/V30.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V31.mp4">
+  <source src="contenido/V31.mp4" type="video/mp4">
+</video></div>
+
+<div class="item"><video autoplay muted loop playsinline controls poster="contenido/V32.mp4">
+  <source src="contenido/V32.mp4" type="video/mp4">
+</video></div>
+
     <!-- ... resto de videos -->
   `;
 
-    // Convertimos en elementos
+    const galeria = document.getElementById("galeria");
+    const pagination = document.getElementById("pagination");
+
     const tempContainer = document.createElement("div");
     tempContainer.innerHTML = itemsHTML;
     const allItems = Array.from(tempContainer.children);
@@ -344,21 +247,23 @@
     let currentPage = 1;
 
     function renderGallery(page) {
-      const galeria = document.getElementById("galeria");
-      galeria.innerHTML = ""; // limpiar
+      galeria.innerHTML = "";
 
       const start = (page - 1) * ITEMS_PER_PAGE;
       const end = start + ITEMS_PER_PAGE;
       const pageItems = allItems.slice(start, end);
 
-      pageItems.forEach(item => galeria.appendChild(item.cloneNode(true)));
+      pageItems.forEach(item => {
+        galeria.appendChild(item.cloneNode(true));
+      });
     }
 
     function renderPagination() {
-      const pagination = document.getElementById("pagination");
       pagination.innerHTML = "";
 
       const totalPages = Math.ceil(allItems.length / ITEMS_PER_PAGE);
+
+      if (totalPages <= 1) return;
 
       for (let i = 1; i <= totalPages; i++) {
         const btn = document.createElement("button");
@@ -368,14 +273,21 @@
           currentPage = i;
           renderGallery(currentPage);
           renderPagination();
+          scrollToTop();
         };
         pagination.appendChild(btn);
       }
     }
 
-    // Inicializar
-    renderGallery(currentPage);
-    renderPagination();
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Inicialización principal
+    window.addEventListener("load", () => {
+      renderGallery(currentPage);
+      renderPagination();
+    });
   </script>
 
 
